@@ -1,0 +1,17 @@
+def fibonacci_recursive(i):
+    if i<=1:
+        return i
+    return fibonacci_recursive(i-1) + fibonacci_recursive(i-2)
+
+def fibonacci_norecursive(n):
+    a,b=0,1
+    for _ in range(n):
+        print(a,end=' ')
+        a,b=b,a+b
+def main():
+    print("The Fibonaaci Series is: ")
+    n=int(input("Enter the number till that: "))
+    for i in range(n):
+        print(fibonacci_recursive(i), end=' ')
+   ''' fibonacci_norecursive(n)'''
+main()
